@@ -1,0 +1,10 @@
+# Netlify configuration for Expense Sharing Platform
+
+[build]
+  publish = "frontend"
+  command = "echo 'No build command needed for demo'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareCost - Community-Driven Expense Sharing Platform</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <i class="fas fa-handshake"></i> ShareCost
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#how-it-works">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#explore">Explore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                    </ul>
+                    <div id="auth-nav">
+                        <button class="btn btn-outline-light mr-2" id="login-button">Log In</button>
+                        <button class="btn btn-light" id="register-button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Share Resources, Split Costs, Build Community</h1>
+                    <p class="lead">Connect with people nearby to share items, split expenses, and save money together.</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-lg mr-3" id="get-started-button">Get Started</button>
+                        <button class="btn btn-outline-primary btn-lg" id="learn-more-button">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1556484687-30636164638b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="People sharing resources" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title text-center">How It Works</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Find & Connect</h3>
+                        <p>Discover resources and people in your community. Our AI matches you with compatible neighbors based on your needs and location.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Share & Save</h3>
+                        <p>Share items you don't use daily, split bulk purchases, or co-own expensive equipment. Save money while reducing waste.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Trust & Earn</h3>
+                        <p>Build your trust score through verified transactions. Earn credits by sharing your skills or resources with others.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section" id="explore">
+        <div class="container">
+            <h2 class="section-title text-center">Explore Resources</h2>
+            <div class="search-container">
+                <form id="search-form" class="search-form">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="search-query">What are you looking for?</label>
+                                <input type="text" class="form-control" id="search-query" placeholder="Tools, appliances, skills...">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="search-category">Category</label>
+                                <select class="form-control" id="search-category">
+                                    <option value="">All Categories</option>
+                                    <option value="1">Tools & Equipment</option>
+                                    <option value="2">Household Items</option>
+                                    <option value="3">Transportation</option>
+                                    <option value="4">Electronics</option>
+                                    <option value="5">Professional Services</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label for="search-location">Location</label>
+                                <input type="text" class="form-control" id="search-location" placeholder="City or ZIP code">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <button type="submit" class="btn btn-primary btn-block">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="resource-listings" class="resource-listings">
+                <!-- Sample Resource Cards -->
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="Camera">
+                    </div>
+                    <div class="resource-details">
+                        <h3>Professional DSLR Camera</h3>
+                        <p class="resource-description">Canon EOS 5D Mark IV with 24-70mm lens, perfect for photography enthusiasts.</p>
+                        <div class="resource-meta">
+                            <span class="resource-category"><i class="fas fa-tag"></i> Electronics</span>
+                            <span class="resource-price"><i class="fas fa-dollar-sign"></i> $45/day</span>
+                        </div>
+                        <div class="resource-owner">
+                            <i class="fas fa-user"></i> John D.
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary btn-sm">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8" alt="Mountain Bike">
+                    </div>
+                    <div class="resource-details">
+                        <h3>Mountain Bike</h3>
+                        <p class="resource-description">Trek Fuel EX 8 mountain bike, great for weekend trails and adventures.</p>
+                        <div class="resource-meta">
+                            <span class="resource-category"><i class="fas fa-tag"></i> Sports & Outdoors</span>
+                            <span class="resource-price"><i class="fas fa-dollar-sign"></i> $25/day</span>
+                        </div>
+                        <div class="resource-owner">
+                            <i class="fas fa-user"></i> Sarah M.
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>ShareCost</h4>
+                    <p>Connect, Share, Save</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShareCost. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
